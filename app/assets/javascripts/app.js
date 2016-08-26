@@ -1,10 +1,20 @@
 angular
     .module('app', ['ui.router', 'templates'])
-    (function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-       .state('authors', {
-        url: '/authors',
-        templateUrl: '.html',
-        controller: 'AuthorsController as vm'
-      })
+    .config(function ($stateProvider, $urlRouterProvider) {
+
+      $stateProvider
+        .state('home', {
+          url: '/', 
+          templateUrl: 'home/home.html', 
+          controller: 'HomeController as vm'
+        })
+        .state('home.authors', {
+          url: 'authors',
+          templateUrl: 'authors/authors.html',
+          controller: 'AuthorsController as vm'
+        });
+
+      $urlRouterProvider.otherwise('/');
+
+    });
 

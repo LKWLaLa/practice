@@ -16,6 +16,11 @@ function AuthorsService($http) {
   
   function getAuthors() {
     return $http.get(API_URL + '/authors')
+      .then(getAuthorsSuccessful);
+  }
+
+  function getAuthorsSuccessful(response) {
+    return response.data
   }
 
 };
