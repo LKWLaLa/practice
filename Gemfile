@@ -14,7 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-
+# Use Bower for Angular 
+gem 'bower-rails'
 # Use ActiveModel::Serializer
 gem 'active_model_serializers'
 # Use jquery as the JavaScript library
